@@ -7,7 +7,8 @@ body {
 }
 
 .main-content {
-  min-height: calc(100vh - 222px);
+  display: grid;
+  min-height: calc(100vh - 207px);
   background-color: white !important;
   padding: 80px 60px 0 80px !important;
 }
@@ -17,8 +18,8 @@ body {
 }
 
 .bg-main-color {
-  background-color: #284139;
-  border-bottom-color: #284139;
+  background-color: #284139 !important;
+  border-bottom-color: #284139 !important;
 }
 
 .uppercase {
@@ -34,4 +35,38 @@ body {
 .action_btn:hover {
   background-color: #c09763 !important;
   color: #284139 !important;
+}
+
+.app-color {
+  color: #284139 !important;
+}
+
+
+/* Input Field */
+.v-input, .v-input__slot:before {
+  border-color: #284139 !important;
+}
+
+.v-input {
+  color: #284139 !important;
+}
+.v-input input:focus {
+  background-color: white !important;
+  outline-color: #c09763 !important;
+}
+.v-text-field__slot .v-label-active {
+  color: #284139 !important;
+}
+
+.v-text-field__slot input {
+  color: #284139 !important;
+}
+
+.v-label {
+  color: #284139 !important
+}
+
+.v-application .primary--text {
+  color: #c09763 !important;
+  caret-color: #c09763;
 }

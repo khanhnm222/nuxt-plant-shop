@@ -1,10 +1,10 @@
 <template lang="vue">
   <div class="app">
     <div>
-      <Navbar />
+      <NavigationBar />
     </div>
-    <Nuxt />
-    <Footer />
+    <!-- <Nuxt /> -->
+    <!-- <Footer /> -->
     <ScrollTop />
   </div>
 </template>
