@@ -10,7 +10,7 @@ export default {
   <v-card class="mr-10 mb-10">
     <v-img
       :src="dataSource.src"
-      class="white--text align-end"
+      class="cursor-pointer white--text align-end"
       gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
     >
       <v-card-title v-text="dataSource.title" />
@@ -34,5 +34,13 @@ export default {
 <style scoped>
 .v-card {
   max-width: 250px;
+  border-radius: 5px !important;
+}
+</style>
+<style>
+.v-responsive__content {
+  color: white;
+  align-self: flex-end;
+  flex: auto;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <v-fab-transition>
     <v-btn
-      class="action_btn"
       v-show="showFab"
       v-scroll="checkScroll"
+      class="action_btn"
       color="primary"
       fab
       fixed

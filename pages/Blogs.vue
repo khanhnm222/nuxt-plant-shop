@@ -22,7 +22,7 @@ export default {
 
 <template>
   <div class="main-content">
-    <div class="flex justify-center font-semibold underline mb-6 text-3xl">
+    <div class="app-color flex justify-center font-semibold underline text-3xl">
       Blogs
     </div>
     <div class="">
@@ -38,7 +38,7 @@ export default {
           <v-card-title>Top 10 Australian beaches</v-card-title>
         </v-img>
 
-        <v-card-subtitle class="pb-0">
+        <v-card-subtitle class="main-color pb-0">
           Number 10
         </v-card-subtitle>
 
