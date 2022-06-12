@@ -1,13 +1,13 @@
 <template>
   <div class="main-content">
-    <div class="flex justify-center font-semibold underline mb-6 text-3xl">
+    <div class="app-color flex justify-center font-semibold underline text-3xl">
       Sign Up
     </div>
     <div class="flex">
-      <v-container fluid>
+      <v-container>
         <v-layout class="justify-center" row wrap>
-          <v-flex xs12 sm6 offset-sm3 mt-3>
-            <form class="w-full">
+          <v-flex class="form-contain xs12 sm6 offset-sm3 mt-3">
+            <form class="form-info w-full">
               <v-layout column>
                 <v-flex>
                   <v-text-field
@@ -55,3 +55,14 @@ export default {
   name: 'SingUp'
 }
 </script>
+<style>
+.form-info {
+  border: 2px solid #284139;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-contain {
+  margin: 0 auto;
+}
+</style>
