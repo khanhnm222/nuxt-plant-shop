@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-  <v-app>
-    <v-main>
-      <div>About</div>
-    </v-main>
-  </v-app>
+  <div class="main-content">
+    <div class="app-color flex justify-center font-semibold underline text-3xl">
+      About
+    </div>
+  </div>
 </template>

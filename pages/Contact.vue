@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="main-content">
-    <div class="flex justify-center font-semibold underline mb-6 text-3xl">
+    <div class="app-color flex justify-center font-semibold underline text-3xl">
       Contact
     </div>
   </div>
