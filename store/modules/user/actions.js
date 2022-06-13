@@ -1,0 +1,21 @@
+export default {
+  getAll ({ commit }) {
+    commit('getAllRequest')
+
+    userService.getAll()
+      .then(
+        users => commit('getAllSuccess', users),
+        error => commit('getAllFailure', error)
+      )
+  },
+
+  delete ({ commit }, id) {
+    commit('deleteRequest', id)
+
+    userService.delete(id)
+      .then(
+        user => commit('deleteSuccess', user),
+        error => commit('deleteSuccess', { id, error: error.toString() })
+      )
+  }
+}

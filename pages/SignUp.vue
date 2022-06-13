@@ -21,19 +21,25 @@
                 <v-flex>
                   <v-text-field
                     id="password"
+                    v-model="password"
                     name="password"
                     label="Password"
-                    type="password"
                     required
+                    :type="password ? 'password' : 'text'"
+                    :append-icon="password ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                    @click:append="() => (password = !password)"
                   />
                 </v-flex>
                 <v-flex>
                   <v-text-field
                     id="confirmPassword"
+                    v-model="confirmPassword"
                     name="confirmPassword"
                     label="Confirm Password"
-                    type="password"
                     required
+                    :type="confirmPassword ? 'password' : 'text'"
+                    :append-icon="confirmPassword ? 'mdi-eye-off-outline' : 'mdi-eye-outline'"
+                    @click:append="() => (confirmPassword = !confirmPassword)"
                   />
                 </v-flex>
                 <v-flex class="text-xs-center" mt-5>

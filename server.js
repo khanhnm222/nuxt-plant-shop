@@ -24,18 +24,18 @@ app.use(
 
 // [POST] /login
 app.post('/login', (req, res, next) => {
-  const { username, password } = req.body
-  const valid = username.length && password === '123'
+  const { email, password } = req.body
+  const valid = email.length && password === '123'
 
   if (!valid) {
-    throw new Error('Invalid username or password')
+    throw new Error('Invalid email or password')
   }
 
   const accessToken = jsonwebtoken.sign(
     {
-      username,
+      email,
       picture: 'https://github.com/nuxt.png',
-      name: 'User ' + username,
+      name: 'User ' + email,
       scope: ['test', 'user']
     },
     'dummy'
