@@ -57,8 +57,32 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
-  name: 'SingUp'
+  name: 'SingUp',
+  data () {
+    return {
+      email: '',
+      password: '',
+      confirmPassword: '',
+      submitted: false
+    }
+  },
+  computed: {
+    ...mapState('account', ['status'])
+  },
+  methods: {
+    ...mapActions('account', ['register']),
+    handleSubmit (e) {
+      console.log('register', e)
+      this.submitted = true
+      this.$validator.validate().then((valid) => {
+        if (valid) {
+          this.register(this.user)
+        }
+      })
+    }
+  }
 }
 </script>
 <style>

@@ -64,7 +64,6 @@ export default {
   methods: {
     ...mapActions('account', ['login', 'logout']),
     handleSubmit (e) {
-      debugger
       console.log('submit login', e)
       this.submitted = true
       const { email, password } = this
@@ -75,7 +74,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
 .form-info {
   border: 2px solid #284139;
   padding: 30px;
@@ -85,4 +84,8 @@ export default {
 .form-contain {
   margin: 0 auto;
 }
+
+/* .v-application--is-ltr .v-text-field .v-label {
+  color: #284139 !important;
+} */
 </style>
