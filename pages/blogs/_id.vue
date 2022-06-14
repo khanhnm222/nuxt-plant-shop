@@ -1,0 +1,73 @@
+<template>
+  <div class="main-content">
+    <div class="app-color flex justify-center font-semibold underline text-3xl">
+      Blog Details
+    </div>
+    <div>
+      <v-row class="justify-center app-color mt-4">
+        <v-col cols="11" md="7">
+          <h2 class="text-center text-md-h4 font-weight-bold">
+            {{ blog.title }}
+          </h2>
+          <div class="mt-2 text-center">
+            <v-chip
+              small
+              label
+              outlined
+              class="mr-1 app-color font-bold"
+            >
+              {{ blog.author }}
+            </v-chip>
+          </div>
+          <br>
+          <v-img
+            width="100%"
+            class="el rounded-lg"
+            height="50vh"
+            :src="blog.image"
+          />
+          <p class="mt-5 mb-7">
+            {{ blog.description }}
+          </p>
+        </v-col>
+      </v-row>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      blog: null,
+      blogs: [
+        {
+          id: '1',
+          color: '#1F7087',
+          image: 'https://cdn.shopify.com/s/files/1/0508/5147/9723/files/Homepage_Slider_AUG2016_Welcome12_1512x.jpg?v=1604934411',
+          title: 'Beautifully Scented Plants for the Kitchen',
+          subTitle: 'Top 10 Australian beaches',
+          shortContent: 'Whitsunday Island, Whitsunday Islands',
+          description: 'Houseplants are a simple way to transform your space, adding a touch of colour and life to your home. They\'re even good for you, as they reduce stress and improve air quality and can give a room a new lease of life. Adding a few plants can really brighten up utilitarian rooms like kitchens, and make daily tasks like dishwashing and cooking a little more pleasant. Growing your own herbs and window-sill salad ingredients is environmentally friendly, too. Did you know that nearly 72% of shoppers now take the environmental impact of their shopping choices into consideration when they purchase food and other groceries? Try these three beautifully scented plants in your kitchen:',
+          author: 'Foster the People'
+        },
+        {
+          id: '2',
+          color: '#952175',
+          image: 'https://img.freepik.com/free-photo/green-wall-mockup-with-green-plant-shelf3d-rendering_41470-4114.jpg?w=1380&t=st=1654439870~exp=1654440470~hmac=ff4d20770ede510a0b14ec572dac0b987eafd1a782f282b35f052e0d396604d2',
+          title: 'The Best Wedding Gifts Are Green',
+          subTitle: 'Top 10 Australian beaches',
+          description: 'If you’re on the search for a meaningful wedding gift, look no further than a gift that grows! A special plant gift can serve as a unique way to remember a landmark occasion. With age, plants become stronger and more resilient—just like love! Plus, who wouldn’t adore some fresh greenery to liven up their home? Read on for our favorite wedding-inspired picks.',
+          shortContent: 'Whitsunday Island, Whitsunday Islands',
+          author: 'Ellie Goulding'
+        }
+      ]
+    }
+  },
+  created () {
+    this.blog = this.blogs.filter(blog => blog.id.toString() === this.$route.params.id)[0]
+  },
+  methods: {}
+}
+</script>
+
+<style></style>
