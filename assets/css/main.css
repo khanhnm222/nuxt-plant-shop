@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: 40 65 57;
+    --color-secondary: 192 151 99;
+    /* ... */
+  }
+}
+
 body {
   @apply antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900;
 }
