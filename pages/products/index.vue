@@ -5,6 +5,9 @@ export default {
   components: { ProductCard },
   data () {
     return {
+      products: null,
+      categories: null,
+      search: null,
       cards: [{
         id: 1,
         name: 'Monstera Deliciosa',
@@ -103,6 +106,10 @@ export default {
       }]
     }
   }
+  // created () {
+  //   this.products = this.$content('products').fetch()
+  //   this.categories = this.$content('category').fetch()
+  // }
 }
 </script>
 <template>
@@ -112,8 +119,10 @@ export default {
         Products
       </div>
       <div class="flex flex-wrap justify-center">
-        <div v-for="(card, index) in cards" :key="index">
-          <ProductCard :data-source="card" />
+        <div v-for="(product, index) in cards" :key="index">
+          <v-fade-transition :key="`product${product.id}-${index}`">
+            <ProductCard :data-source="product" />
+          </v-fade-transition>
         </div>
       </div>
     </div>

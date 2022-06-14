@@ -16,7 +16,7 @@
       <v-row>
         <template v-for="(c, i) in $store.state.cart.cart">
           <v-col :key="`cartItem${i}`">
-            <v-card class="checkout-cart" color="surface" flat>
+            <v-card class="checkout-cart" flat>
               <v-btn
                 absolute
                 top
