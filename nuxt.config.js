@@ -21,7 +21,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/main.css'
+    '@/assets/css/main.css',
+    '@sweetalert2/theme-material-ui'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -37,6 +38,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxt/content',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxt/postcss8',
@@ -74,8 +76,21 @@ export default {
     theme: {
       dark: true,
       themes: {
+        light: {
+          primary: colors.deepPurple.darken1,
+          bg: '#ffffff',
+          surface: '#ffffff',
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        },
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.deepPurple.darken1,
+          bg: '#0a0514',
+          surface: '#130a24',
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,

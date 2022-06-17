@@ -63,9 +63,8 @@
                 </v-icon>
                 <span class="ml-2">0</span> -->
                 <v-badge
-                  v-if="$store.state.cart.cart.length > 0"
                   overlap
-                  :content="`${$store.state.cart.cart.length}`"
+                  :content="`${$store.state.cart.cart.length ? $store.state.cart.cart.length : '0'}`"
                 >
                   <v-btn nuxt to="/cart" icon>
                     <v-icon size="20">
@@ -164,5 +163,15 @@ export default {
 <style>
 .v-toolbar__content {
   margin: 0 30px;
+}
+
+.cart a {
+  height: 40px !important;
+  width: 40px !important;
+}
+
+.v-badge .v-badge__wrapper .v-badge__badge {
+  background-color: #c09763 !important;
+  color: #284139 !important;
 }
 </style>

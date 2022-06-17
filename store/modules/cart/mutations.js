@@ -26,7 +26,6 @@ export default {
       icon: 'success',
       timer: 4000,
       timerProgressBar: true,
-      showConfirmButton: false,
       position: 'top-end'
     })
     // alert('add a product to cart successfull!')
@@ -46,7 +45,6 @@ export default {
       icon: 'success',
       timer: 3000,
       timerProgressBar: true,
-      showConfirmButton: false,
       position: 'top-end'
     })
   },
@@ -60,7 +58,6 @@ export default {
       icon: 'success',
       timer: 3000,
       timerProgressBar: true,
-      showConfirmButton: false,
       position: 'top-end'
     })
   },
@@ -74,7 +71,6 @@ export default {
       icon: 'success',
       timer: 3000,
       timerProgressBar: true,
-      showConfirmButton: false,
       position: 'top-end'
     })
   },

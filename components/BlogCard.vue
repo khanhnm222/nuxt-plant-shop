@@ -8,15 +8,16 @@ export default {
 </script>
 <template>
   <v-card class="mr-10 mb-10" min-width="500">
-    <v-img
-      class="white--text align-end cursor-pointer"
-      height="200px"
-      :src="dataSource.src"
-    >
-      <v-card-title v-text="dataSource.title" />
-    </v-img>
-
-    <v-card-subtitle class="main-color pb-0" v-text="dataSource.author" />
+    <nuxt-link :to="`/blogs/${dataSource.id}`">
+      <v-img
+        class="white--text align-end cursor-pointer"
+        height="200px"
+        :src="dataSource.src"
+      >
+        <v-card-title v-text="dataSource.title" />
+      </v-img>
+      <v-card-subtitle class="main-color pb-0" v-text="dataSource.author" />
+    </nuxt-link>
 
     <v-card-text class="text--primary">
       <div>{{ dataSource.shortContent }}</div>
